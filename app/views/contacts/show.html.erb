@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @contact.name %>
-</p>
+</h1>
 
 <p>
   <strong>Email:</strong>
@@ -14,6 +13,60 @@
   <strong>Phone:</strong>
   <%= @contact.phone %>
 </p>
+
+<h2>Messages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Sent at</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.body %></td>
+        <td><%= message.sent_at %></td>
+        <td><%= link_to 'Destroy', [@contact, message], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>New Message</h2>
+
+<%= form_for([@contact, @new_message]) do |f| %>
+  <% if @new_message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+      <% @new_message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sent_at %>
+    <%= f.datetime_select :sent_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<br>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>
