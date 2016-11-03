@@ -10,6 +10,8 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.json
   def show
+    @messages = @contact.messages.order(sent_at: :desc).all
+    @new_message = Message.new
   end
 
   # GET /contacts/new
