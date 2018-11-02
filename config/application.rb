@@ -16,7 +16,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-Honeycomb.init
+Honeycomb.init logger: Logger.new($stderr)
 
 module ConciergeCrmDemo
   class Application < Rails::Application
