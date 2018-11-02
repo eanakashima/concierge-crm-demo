@@ -48,3 +48,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Honeycomb Beeline, Rails PRs only
+gem 'honeycomb-beeline', git: 'https://github.com/honeycombio/beeline-ruby', branch: 'sam.rails'
+gem 'rack-honeycomb', git: 'https://github.com/honeycombio/rack-honeycomb', branch: 'sam.rails'
+gem 'activerecord-honeycomb', git: 'https://github.com/honeycombio/activerecord-honeycomb', branch: 'sam.binds'
