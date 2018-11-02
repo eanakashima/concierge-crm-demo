@@ -1,15 +1,15 @@
 GIT
   remote: https://github.com/honeycombio/activerecord-honeycomb
-  revision: 6150d2fdf0c5f226d05fb718bd126707842c0d75
-  branch: sam.binds
+  revision: 9c80f9ef4632f53052cc457f11dd24e4851e7f0e
+  branch: sam.x-proc-trace
   specs:
     activerecord-honeycomb (0.2.4)
       libhoney
 
 GIT
   remote: https://github.com/honeycombio/beeline-ruby
-  revision: 66b6301641eb6a37b60cf4e63c747dbd80217fda
-  branch: sam.rails
+  revision: a83f7b217af01da6a879f01f6c791fdf22bd0ffd
+  branch: sam.x-proc-trace
   specs:
     honeycomb-beeline (0.4.0)
       activerecord-honeycomb (>= 0.2.1)
@@ -20,8 +20,8 @@ GIT
 
 GIT
   remote: https://github.com/honeycombio/rack-honeycomb
-  revision: 688ff499c1c1ad0c9bfa3afa341e13a6e79c3a96
-  branch: sam.rails
+  revision: c4b66989d82ccda819ca1c1c05e83e9c496531e5
+  branch: sam.x-proc-trace
   specs:
     rack-honeycomb (0.2.2)
       libhoney (>= 1.5.0)

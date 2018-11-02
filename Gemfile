@@ -50,6 +50,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Honeycomb Beeline, Rails PRs only
-gem 'honeycomb-beeline', git: 'https://github.com/honeycombio/beeline-ruby', branch: 'sam.rails'
-gem 'rack-honeycomb', git: 'https://github.com/honeycombio/rack-honeycomb', branch: 'sam.rails'
-gem 'activerecord-honeycomb', git: 'https://github.com/honeycombio/activerecord-honeycomb', branch: 'sam.binds'
+gem 'honeycomb-beeline', git: 'https://github.com/honeycombio/beeline-ruby', branch: 'sam.x-proc-trace'
+gem 'rack-honeycomb', git: 'https://github.com/honeycombio/rack-honeycomb', branch: 'sam.x-proc-trace'
+gem 'activerecord-honeycomb', git: 'https://github.com/honeycombio/activerecord-honeycomb', branch: 'sam.x-proc-trace'
